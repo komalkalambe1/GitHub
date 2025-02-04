@@ -1,0 +1,9 @@
+<template>
+    <div>
+        <h1>Parent Component</h1>
+        <p>Received Details:</p>
+        <p>Name: {obj.name}</p>
+        <p>Age: {obj.age}</p>
+        <c-custom-event-child2 onsenddetails={handleDetails}></c-custom-event-child2>
+    </div>
+</template>

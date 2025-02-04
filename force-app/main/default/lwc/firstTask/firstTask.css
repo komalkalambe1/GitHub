@@ -1,0 +1,15 @@
+/* .slds-box{
+    background-color: white;
+}
+
+.slds-button .slds-button_brand:hover{
+    background-color: green;
+} */
+
+.slds-button_neutral{
+    background-color: skyblue;
+    border: none;
+}
+.slds-button_neutral:hover{
+    background-color: mediumseagreen;
+}

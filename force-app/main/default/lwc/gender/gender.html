@@ -1,0 +1,72 @@
+<template>
+    <div class="slds-col slds-size_1-of-3 slds-text-align_right">
+      <lightning-icon icon-name="utility:user" alternative-text="User Icon"></lightning-icon>
+      <span
+        class="slds-m-right_medium user-name-dropdown"
+        onclick={toggleDropdown}
+      >
+        User Name
+      </span>
+
+      <!-- Dropdown Menu -->
+      <div
+        class="slds-dropdown slds-dropdown_right {dropdownClass}"
+       
+      >
+        <ul class="slds-dropdown__list">
+          <li class="slds-dropdown__item">
+            <a href="#">Profile</a>
+          </li>
+          <li class="slds-dropdown__item">
+            <a href="#">Settings</a>
+          </li>
+          <li class="slds-dropdown__item">
+            <a href="#">Help</a>
+          </li>
+          <li class="slds-dropdown__item">
+            <a href="#">Log Out</a>
+          </li>
+        </ul>
+      </div>
+        <!--<span class="slds-m-right_medium">User Name</span>
+      
+        Dropdown Trigger 
+        <div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+          <button class="slds-button slds-button_icon slds-button_icon-border-filled" aria-haspopup="true" aria-expanded="false">
+            <lightning-icon icon-name="utility:down" alternative-text="Down Arrow"></lightning-icon>
+            <span class="slds-assistive-text">Show More</span>
+          </button>
+        Dropdown Menu 
+          <div class="slds-dropdown slds-dropdown_right">
+            <ul class="slds-dropdown__list" role="menu">
+              <li class="slds-dropdown__item" role="presentation">
+                <a href="#" role="menuitem" tabindex="0">
+                  <span class="slds-truncate" title="Profile">Profile</span>
+                </a>
+              </li>
+              <li class="slds-dropdown__item" role="presentation">
+                <a href="#" role="menuitem" tabindex="0">
+                  <span class="slds-truncate" title="Settings">Settings</span>
+                </a>
+              </li>
+              <li class="slds-dropdown__item" role="presentation">
+                <a href="#" role="menuitem" tabindex="0">
+                  <span class="slds-truncate" title="Help">Help</span>
+                </a>
+              </li>
+              <li class="slds-dropdown__item" role="presentation">
+                <a href="#" role="menuitem" tabindex="0">
+                  <span class="slds-truncate" title="Log Out">Log Out</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>-->
+
+        
+      
+        <lightning-icon icon-name="utility:lock" alternative-text="lock"></lightning-icon>
+        <span class="slds-m-right_medium">SIGN OUT</span>
+      </div>
+      
+</template>

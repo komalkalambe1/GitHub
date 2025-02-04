@@ -1,0 +1,151 @@
+<template>
+    <div class="slds-card" title="Custom Validation Form">
+        <div class="slds-p-around_medium">
+            <!-- Name -->
+            <div class="slds-form-element">
+                <label class="slds-form-element__label" for="formName">Name</label>
+                <div class="slds-form-element__control">
+                    <input
+                        type="text"
+                        id="formName"
+                        name="name"
+                        class="slds-input"
+                        placeholder="Enter Name"
+                        value={formData.name}
+                        onchange={handleInputChange}
+                        required
+                    />
+                </div>
+                <template if:true={errors.name}>
+                    <div class="slds-text-color_error slds-m-top_xx-small">{errors.name}</div>
+                </template>
+            </div>
+
+            <!-- Email -->
+            <div class="slds-form-element">
+                <label class="slds-form-element__label" for="formEmail">Email</label>
+                <div class="slds-form-element__control">
+                    <input
+                        type="email"
+                        id="formEmail"
+                        name="email"
+                        class="slds-input"
+                        placeholder="Enter Email"
+                        value={formData.email}
+                        onchange={handleInputChange}
+                        required
+                    />
+                </div>
+                <template if:true={errors.email}>
+                    <div class="slds-text-color_error slds-m-top_xx-small">{errors.email}</div>
+                </template>
+            </div>
+
+            <!-- PAN -->
+            <div class="slds-form-element">
+                <label class="slds-form-element__label" for="formPan">PAN</label>
+                <div class="slds-form-element__control">
+                    <input
+                        type="text"
+                        id="formPan"
+                        name="pan"
+                        class="slds-input"
+                        maxlength="10"
+                        placeholder="Enter PAN"
+                        value={formData.pan}
+                        onchange={handleInputChange}
+                        required
+                    />
+                </div>
+                <template if:true={errors.pan}>
+                    <div class="slds-text-color_error slds-m-top_xx-small">{errors.pan}</div>
+                </template>
+            </div>
+
+            <!-- Aadhar -->
+            <div class="slds-form-element">
+                <label class="slds-form-element__label" for="formAadhar">Aadhar Number</label>
+                <div class="slds-form-element__control">
+                    <input
+                        type="text"
+                        id="formAadhar"
+                        name="aadhar"
+                        class="slds-input"
+                        maxlength="12"
+                        placeholder="Enter Aadhar Number"
+                        value={formData.aadhar}
+                        onchange={handleInputChange}
+                        required
+                    />
+                </div>
+                <template if:true={errors.aadhar}>
+                    <div class="slds-text-color_error slds-m-top_xx-small">{errors.aadhar}</div>
+                </template>
+            </div>
+
+            <!-- Phone -->
+            <div class="slds-form-element">
+                <label class="slds-form-element__label" for="formPhone">Phone</label>
+                <div class="slds-form-element__control">
+                    <input
+                        type="tel"
+                        id="formPhone"
+                        name="phone"
+                        class="slds-input"
+                        maxlength="10"
+                        placeholder="Enter Phone Number"
+                        value={formData.phone}
+                        onchange={handleInputChange}
+                        required
+                    />
+                </div>
+                <template if:true={errors.phone}>
+                    <div class="slds-text-color_error slds-m-top_xx-small">{errors.phone}</div>
+                </template>
+            </div>
+
+            <!-- Gender -->
+            <div class="slds-form-element">
+                <label class="slds-form-element__label">Gender</label>
+                <div class="slds-form-element__control">
+                    <input type="radio" id="maleRadio" name="gender" value="Male" onchange={handleRadioChange} />
+                    <label for="maleRadio">Male</label>
+                    <input type="radio" id="femaleRadio" name="gender" value="Female" onchange={handleRadioChange} />
+                    <label for="femaleRadio">Female</label>
+                </div>
+                <template if:true={errors.gender}>
+                    <div class="slds-text-color_error slds-m-top_xx-small">{errors.gender}</div>
+                </template>
+            </div>
+
+            <!-- Sports -->
+            <div class="slds-form-element">
+                <label class="slds-form-element__label">Sports</label>
+                <div class="slds-form-element__control">
+                    <input type="checkbox" id="footballCheckbox" name="sports" value="Football" onchange={handleCheckboxChange} />
+                    <label for="footballCheckbox">Football</label>
+                    <input type="checkbox" id="basketballCheckbox" name="sports" value="Basketball" onchange={handleCheckboxChange} />
+                    <label for="basketballCheckbox">Basketball</label>
+                </div>
+                <template if:true={errors.sports}>
+                    <div class="slds-text-color_error slds-m-top_xx-small">{errors.sports}</div>
+                </template>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="slds-m-top_medium">
+                <button
+                    type="button"
+                    class="slds-button slds-button_brand"
+                    onclick={handleSubmit}>
+                    Submit
+                </button>
+            </div>
+        </div>
+
+        <!-- Global Error Message -->
+        <template if:true={errorMessage}>
+            <div class="slds-text-color_error slds-m-top_medium">{errorMessage}</div>
+        </template>
+    </div>
+</template>

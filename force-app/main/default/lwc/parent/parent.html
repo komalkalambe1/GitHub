@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="Parent Component">
+        <div class="slds-p-around_medium">
+            <p>Child One: {childOneStatus}</p>
+            <p>Child Two: {childTwoStatus}</p>
+            <p>Child Three: {childThreeStatus}</p>
+        </div>
+        <div class="slds-grid slds-wrap">
+            <c-child
+                child-name="Child One"
+                is-selected={isChildOneSelected}
+                onchildtoggle={handleChildToggle}
+            ></c-child>
+            <c-child
+                child-name="Child Two"
+                is-selected={isChildTwoSelected}
+                onchildtoggle={handleChildToggle}
+            ></c-child>
+            <c-child
+                child-name="Child Three"
+                is-selected={isChildThreeSelected}
+                onchildtoggle={handleChildToggle}
+            ></c-child>
+        </div>
+    </lightning-card>
+ 
+</template>

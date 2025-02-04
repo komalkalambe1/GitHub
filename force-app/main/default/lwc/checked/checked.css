@@ -1,0 +1,34 @@
+/* Hide the default radio button */
+.radio-input {
+    display: none;
+  }
+  
+  /* Style the custom radio button */
+  .custom-radio {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #005eff;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  /* Add a checkmark when the radio button is selected */
+  .radio-input:checked + .custom-radio::after {
+    content: '✔';
+    position: absolute;
+    color: white;
+    font-size: 14px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #005eff;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  

@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Grand Parent" icon-name="utility:apps">
+        <div class="slds-p-around_medium">
+            <p>{selectedCount} of {totalCount} Children selected</p>
+            <lightning-button label="Reset All" variant="brand" onclick={resetAll}></lightning-button>
+        </div>
+        <c-parent onchildselectionchange={handleChildSelection}></c-parent>
+    </lightning-card>
+
+</template>

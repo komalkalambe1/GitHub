@@ -1,0 +1,50 @@
+<template>
+    <lightning-card title="New Account Applications">
+    <div class="instructions">
+    <h2>Start a new application journey</h2>
+    <p>Please select which account you want to apply for:</p>
+    </div>
+                <div class="actions">
+                    <lightning-button
+                    label="Start Application"
+                    icon-name="utility:chevronright"
+                    icon-position="right"
+                    variant="neutral"
+                    onclick={startApplication}
+                   
+                    ></lightning-button>
+            </div>
+            <div class="account-container">
+                <template for:each={accounts} for:item="account">
+                <div
+                        key={account.id}
+                        class={account.className}
+                        onclick={handleSelection}
+                        data-id={account.id}
+                    >
+        <div class="header">
+                    <span
+                        class="badge"
+                        style="background-color: {account.badgeColor}"
+                    ></span>
+                        <h3><strong>{account.name}</strong></h3>
+        </div>
+                    <p>{account.description}</p>
+                    <p class="supported-currencies">
+                            Supported currencies: {account.currencies}
+    </p>
+                        <lightning-input
+                            type="radio"
+                            label=""
+                            name="accountSelection"
+                            value={account.id}
+                            checked={account.selected}
+                            onchange={handleRadioChange}
+                        ></lightning-input>
+    </div>
+    </template>
+    </div>
+     
+           
+    </lightning-card>
+    </template>

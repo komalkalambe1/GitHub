@@ -1,0 +1,22 @@
+:host {
+    display: block;
+    margin: 1rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 0.5rem 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--lwc-brandColor, #1b74e4);
+}
+
+a:hover {
+    text-decoration: underline;
+}

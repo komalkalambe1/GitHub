@@ -1,0 +1,26 @@
+<template>
+    <template if:true={opportunities}>
+        <lightning-card title="Opportunities" icon-name="standard:opportunity">
+            <div class="slds-p-around_medium">
+                <ul class="slds-has-dividers_around-space">
+                    <template for:each={opportunities} for:item="opp">
+                        <li key={opp.Id} class="slds-item">
+                            <a href="javascript:void(0);" data-id={opp.Id} onclick={handleNavigation} class="slds-text-link">
+                                <p class="slds-truncate" title={opp.Name}>{opp.Name}</p>
+                                <p class="slds-text-body_small">Amount: {opp.Amount}</p>
+                                <p class="slds-text-body_small">Close Date: {opp.CloseDate}</p>
+                            </a>
+                        </li>
+                    </template>
+                </ul>
+            </div>
+        </lightning-card>
+    </template>
+    <template if:true={error}>
+        <lightning-card title="Error" icon-name="utility:error">
+            <div class="slds-p-around_medium">
+                <p>{error.body.message}</p>
+            </div>
+        </lightning-card>
+    </template>
+</template>

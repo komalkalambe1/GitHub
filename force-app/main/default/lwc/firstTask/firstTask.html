@@ -1,0 +1,86 @@
+<!--<template>
+    <div class="slds-box">
+       
+        <div class="slds-grid slds-wrap">
+            <div class="slds-p-left slds-size_6-of-12">
+                <div class="slds-p-left slds-form-element" >
+                    <label class="slds-form-element__label" for="text-input-id-2">
+                    <abbr class="slds-required" title="required">* </abbr>First Name:</label>
+                    <div class="slds-form-element__control">
+                    <input type="text" id="text-input-id-1" value={firstname} placeholder="Placeholder text…" required="" class="slds-input" />
+                    </div>
+                    </div>
+            </div>
+
+            <div class="slds-p-left slds-size_6-of-12">
+                <div class="slds-p-left slds-form-element">
+                    <label class="slds-form-element__label" for="text-input-id-2">
+                    <abbr class="slds-required" title="required">* </abbr>Last Name:</label>
+                    <div class="slds-form-element__control">
+                    <input type="text" id="text-input-id-2" value={lastname}  placeholder="Placeholder text…" required="" class="slds-input" />
+                    </div>
+                    </div>
+            </div>
+        </div>
+
+
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_6-of-12">
+               <div class="slds-form-element">
+                <label class="slds-form-element__label" for="text-input-id-2">
+                <abbr class="slds-required" title="required">* </abbr>Email:</label>
+                  <div class="slds-form-element__control">
+                <input type="email" id="text-input-id-3" value={email}  placeholder="Placeholder text…" required="" class="slds-input" />
+                  </div>
+                </div>
+            </div>
+
+          
+        <div class="slds-col slds-size_6-of-12">
+            <div class="slds-form-element">
+                    <label class="slds-form-element__label" for="text-input-id-2">
+                    <abbr class="slds-required" title="required">* </abbr>Phone:</label>
+                    <div class="slds-form-element__control">
+                    <input type="tel" id="text-input-id-4" value={phone}  placeholder="Placeholder text…" required="" class="slds-input" />
+                    </div>
+                    </div>
+                    </div>
+        </div>
+        
+    </div>
+
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_12-of-12">
+            <button class="slds-button slds-button_brand" >Submit</button>
+        </div>
+        </div>
+    
+</template>
+
+-->
+
+
+<template>
+    <lightning-card title="Details">
+ 
+    <div class="slds-grid slds-size_1-of-2">
+        <div class="slds-p-left_medium">
+          <lightning-input type="text" label="FirstName:" onchange={field1} ></lightning-input>
+        </div>
+        <div class="slds-p-left_large">
+          <lightning-input type="text" label="LastName:" onchange={field2}></lightning-input>
+        </div>
+    </div>
+ 
+        <div class="slds-grid slds-size_1-of-2">
+        <div class="slds-size_1-of-2 slds-p-left_medium">
+            <span><lightning-input type="text" label="Email Id:" onchange={field3}></lightning-input></span>
+        </div>
+        <div class="slds-size_1-of-2 slds-p-left_medium">
+            <span><lightning-input type="text" label="Phone" onchange={field4}></lightning-input></span>
+          </div>
+        </div>
+        <!-- <label>submit</label> -->
+      <button class="slds-p-around_medium slds-button_neutral"  onclick={buttonHandler}>submit</button>
+    </lightning-card>
+</template>

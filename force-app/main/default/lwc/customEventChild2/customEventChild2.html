@@ -1,0 +1,19 @@
+<template>
+    <div>
+        <lightning-input
+            label="Enter Name"
+            value={name}
+            onchange={handleNameChange}>
+        </lightning-input>
+        <lightning-input
+            label="Enter Age"
+            type="number"
+            value={age}
+            onchange={handleAgeChange}>
+        </lightning-input>
+        <lightning-button
+            label="Send Details to Parent"
+            onclick={sendDetailsToParent}>
+        </lightning-button>
+    </div>
+</template>

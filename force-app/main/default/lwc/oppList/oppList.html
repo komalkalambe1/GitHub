@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Opportunities" icon-name="standard:opportunity">
+        <template if:true={accountId}>
+            <lightning-datatable
+                key-field="Id"
+                data={opportunities}
+                columns={columns}
+                hide-checkbox-column="true"
+                onrowaction={handleOpportunityClick}>
+            </lightning-datatable>
+        </template>
+        <template if:false={accountId}>
+            <p>Select an account to view related opportunities.</p>
+        </template>
+    </lightning-card>
+</template>

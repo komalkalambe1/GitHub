@@ -1,0 +1,89 @@
+<template>
+
+    <h3>Lightning</h3>
+    <lightning-card title="Custom Validation Form">
+    <div class="slds-p-around_medium">
+    <lightning-input
+                    label="Name"
+                    name="name"
+                    type="text"
+                    required
+                    value={formData.name}
+                    onchange={handleInputChange}
+                    message-when-bad-input="Please enter a valid name">
+    </lightning-input>
+     
+                <lightning-input
+                    label="Email"
+                    name="email"
+                    type="email"
+                    required
+                    value={formData.email}
+                    onchange={handleInputChange}
+                    message-when-bad-input="Please enter a valid email address">
+    </lightning-input>
+     
+                <lightning-input
+                    label="PAN"
+                    name="pan"
+                    type="text"
+                    maxlength="10"
+                    required
+                    value={formData.pan}
+                    onchange={handleInputChange}
+                    message-when-bad-input="PAN must be in format ABCDE1234F">
+    </lightning-input>
+     
+                <lightning-input
+                    label="Aadhar Number"
+                    name="aadhar"
+                    type="text"
+                    maxlength="12"
+                    required
+                    value={formData.aadhar}
+                    onchange={handleInputChange}
+                    message-when-bad-input="Aadhar must be a 12-digit number">
+    </lightning-input>
+     
+                <lightning-input
+                    label="Phone"
+                    name="phone"
+                    type="tel"
+                    maxlength="10"
+                    required
+                    value={formData.phone}
+                    onchange={handleInputChange}
+                    message-when-bad-input="Phone number must be 10 digits">
+    </lightning-input>
+     
+                <lightning-checkbox-group
+                label="Sports"
+                name="sports"
+                required
+                value={formData.sports}
+                options={sportsOptions}
+                onchange={handleInputChange}>
+    </lightning-checkbox-group>
+     
+            <lightning-radio-group
+                label="Gender"
+                name="gender"
+                options={genderOptions}
+                type="radio"
+                required
+                value={formData.gender}
+                onchange={handleInputChange}>
+    </lightning-radio-group>
+     
+                <lightning-button
+                    label="Submit"
+                    variant="brand"
+                    onclick={handleSubmit}>
+    </lightning-button>
+     
+                <template if:true={errorMessage}>
+    <div class="slds-text-color_error">{errorMessage}</div>
+    </template>
+    </div>
+    </lightning-card>
+    </template>
